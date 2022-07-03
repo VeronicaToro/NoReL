@@ -132,6 +132,25 @@ python main.py -s minimum -t maximum -sd 10 -d ../network_config_files/custom_ne
 
 Even though the *-s* and *-t* flags have no effect in this case, they must always be entered. Note that the format of the INI files are based on the config files used in the [FloRa simulator](https://github.com/florasim/flora).
 
+
+Choosing which approach to run
+==============================
+
+You can choose whether to run the simulator with NoReL or ADR. To do this, use the option *-sm*, which can take the value of *NoReL* or *ADR*. The ADR implementation follows the specifications in [this paper](https://ieeexplore.ieee.org/document/8406255).
+
+
+Dynamic scenarios
+=================
+
+There are three different dynamic scenarios supported by the simulator. These can be specified with the option *-ct*:
+
+* *addNodes*: Adding new nodes to the network. The number of new nodes must be given with option *-nn*
+* *channelConditions*: Changing the channel conditions as explained in [the paper](https://ieeexplore.ieee.org/document/9813414).
+* *additionalTraffic*: Increasing the traffic in the network by a factor of 5.
+
+The change is introduced in the middle of the simulation, e.g., if the simulation time is 10 days, then, the first 5 days are simulated with normal conditions and the last 5 days are simulated with the new (changed) conditions.
+
+
 Saving your results
 ===================
 
@@ -139,6 +158,8 @@ You can store the final delivery ratio per node in a [numpy](https://numpy.org/)
 ```
 python main.py -s minimum -t maximum -sd 10 -d ../network_config_files/network_config.ini -df results.npy -srf 1
 ```
+
+Moreover, you can choose to keep track of the overall network delivery ratio and distribution of SFs and TPs during the simulated time. To do this, turn up the option *-rt* and specify the output filename with option *-od*.
 
 Changing parameters
 ===================
