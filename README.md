@@ -2,6 +2,24 @@ This repository is the implementation of NoReL, a no-regret algorithm for the op
 
 V. Toro-Betancur, G. Premsankar, C. -F. Liu, M. Słabicki, M. Bennis and M. D. Francesco, "Learning How to Configure LoRa Networks with No Regret: a Distributed Approach," in IEEE Transactions on Industrial Informatics, 2022, doi: 10.1109/TII.2022.3187721.
 
+<details>
+
+  <summary>Click here to get BibTeX entry</summary>
+
+  ```
+    @ARTICLE{Toro2022Learning,
+  author={Toro-Betancur, Veronica and Premsankar, Gopika and Liu, Chen-Feng and Slabicki, Mariusz and Bennis, Mehdi and Francesco, Mario Di},
+  journal={IEEE Transactions on Industrial Informatics}, 
+  title={Learning How to Configure LoRa Networks with No Regret: a Distributed Approach}, 
+  year={2022},
+  volume={},
+  number={},
+  pages={1-12},
+  doi={10.1109/TII.2022.3187721}}
+  ```
+
+</details>
+
 Setting the environment
 =======================
 
@@ -28,7 +46,7 @@ python -m venv .norel-env
 ```
 Activate it
 ```
-source .lora-env/bin/activate
+source .norel-env/bin/activate
 ```
 And install the dependencies
 ```
